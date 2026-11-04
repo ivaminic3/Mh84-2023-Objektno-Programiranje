@@ -5,10 +5,29 @@ public class Line {
 	private Point endPoint;
 	private boolean selected;
 	
+	public Line() {
+		
+		
+	}
+	public Line(Point startPoint, Point endPoint) {
+		this.startPoint=startPoint;
+		this.endPoint=endPoint;
+		
+		
+	}
+	public Line(Point startPoint, Point endPoint, boolean selected) {
+	this(startPoint, endPoint);
+	this.selected=selected;
+	
+		
+	}
 	public double length() {
 		return startPoint.distance(endPoint);//sve sto je tipa point moze da koristi sve metode te kalase a i distance is set as public
 	}
-	
+	@Override
+	public String toString() {
+		return String.format("(%s,%s) -> (%s,%s)" , startPoint.getX(), startPoint.getY(), endPoint.getX(), endPoint.getY()); 
+	}
 	public Point getStartPoint() {
 		return startPoint;
 		

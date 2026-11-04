@@ -35,6 +35,42 @@ public class Testing {
 		System.out.println(l1.isSelected());
 		System.out.println(l1.getStartPoint().getX());
 		
+		
+		//Vjezba 4
+		//public Rectangle(
+		Rectangle r1= new Rectangle(new Point(20,20), 50, 50);// pozivamo novi konstruktor Point i dajemo mu koordinate, yatim sirinu i duzinu pravougaonikaa
+		
+		// metoda toString je zaduzena za tekstuanu repreyentaciju
+		System.out.println(r1.toString());
+		System.out.println(r1);
+		
+		// am metoda equals je zaduzena za poredjenje reference
+		Rectangle r2=r1;
+		Rectangle r3 = new Rectangle(new Point(20,20), 50, 50);
+		System.out.println(r1.equals(r2));
+		System.out.println(r1.equals(r3));
+		
+		System.out.println("Dali su pravougaonici instance klase object?");
+		//instance off je operator koji provjerava da li je objekat instance neke klase
+		System.out.println(r1 instanceof Object);
+//      r1 je Ractangle ali objekat na koji pokazuje je istovremeno vise stvari
+		Object ob = new Object();
+		System.out.println("Objekti klase Object nisu instance bilo koje druge kalase");
+		System.out.println(ob instanceof Rectangle);
+		
+		
+		System.out.println("Testiranje toString metode");
+		System.out.println(p1);
+		
+		System.out.println(p1.equals(r1));
+		System.out.println(p1.equals(p2));
+		System.out.println(p1.equals(ob));
+		
+		/*p1.equals(r1);
+		p1.equals(p2);
+		p1.equals(ob);
+		*/ 
+		
 	}
 
 }
