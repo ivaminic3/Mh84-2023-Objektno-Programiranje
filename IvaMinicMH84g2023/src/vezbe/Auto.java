@@ -31,7 +31,9 @@ public class Auto {
 	private int brzina;
 	private String marka;
 	private boolean ukljucen;
-	
+	public Auto() {
+		
+	};
 	public Auto(String marka, int brzina, boolean ukljucen) {
 		
 		this.marka = marka;
