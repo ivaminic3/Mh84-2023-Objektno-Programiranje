@@ -41,6 +41,8 @@ public class Auto2 {
 	auto3.stani(0);
 	auto3.oAutu();
 	
+	System.out.println(auto1.toString());
+	System.out.println(auto2.equals(auto3));
 	
 	}
 

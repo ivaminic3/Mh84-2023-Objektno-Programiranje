@@ -34,12 +34,48 @@ public class Auto {
 	public Auto() {
 		
 	};
+	public Auto(String marka, int brzina) {
+		this.brzina = brzina;
+		this.marka = marka;
+	};
+	
 	public Auto(String marka, int brzina, boolean ukljucen) {
 		
-		this.marka = marka;
-		this.brzina = brzina;
+		this(marka,brzina);
 		this.ukljucen = ukljucen;
 		
+	}
+	@Override
+	/*„Objekat klase Auto, marke <marka> , koji je trenutno 
+	<ukljucen> i kreće se brzinom od <brzina> km/h“. 
+	Prilikom ove metode obavezno uzeti u obzir da li je auto 
+	uključen ili ne i na osnovu toga modifikovati poruku 
+	slično kao kod oAutu() metodi. Nakon implementacije 
+	ove metode izbrisati metodu oAutu(). Primer izvršavanja
+	 ove metode: „Objekat klase Auto, marke Pezo, 
+	koji je trenutno upaljen i krece se brzinom od 50 km/h“.*/
+	
+	public String toString() {
+		if(ukljucen) {
+			return "Objekat klase Auto, marke "+marka+" , koji je trenutno \r\n"
+					+ "	<ukljucen> i kreće se brzinom od "+brzina+" km/h.";}
+			else {
+				
+				return "Objekat klase Auto, marke "+marka+" je ugasen.";
+			}
+		
+		
+		
+	}
+	@Override 
+	
+	public boolean equals(Object o) {
+		if(o instanceof Auto) {
+			Auto drugi = (Auto) o;
+			return marka.equals(drugi.marka);
+		}
+		
+		return false;
 	}
 
 	public int getBrzina() {
